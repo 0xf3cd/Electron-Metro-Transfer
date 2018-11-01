@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<style type="text/css">
+	@import "./css/Canvas.css";
+</style>
+
+<html>
+	 <head>
+        <script src="./vex/vex.combined.min.js"></script>
+        <link rel="stylesheet" href="./css/vex.css" />
+        <link rel="stylesheet" href="./css/vex-theme-default.css" />
+        <link rel="stylesheet" href="./css/vex-theme-os.css" />
+        <link rel="stylesheet" href="./css/vex-theme-plain.css" />
+        <link rel="stylesheet" href="./css/vex-theme-wireframe.css" />
+        <link rel="stylesheet" href="./css/vex-theme-flat-attack.css" />
+        <link rel="stylesheet" href="./css/vex-theme-top.css" />
+        <link rel="stylesheet" href="./css/vex-theme-bottom-right-corner.css" />
+    </head>
+	<!-- <script src="./node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+	<link rel="stylesheet" href="./node_modules/sweetalert2/dist/sweetalert2.min.css">
+
+	Include a polyfill for ES6 Promises (optional) for IE11 and Android browser
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script> -->
+	<body style="-webkit-app-region: drag">
+		<div class="container">
+			<div class="draw" id="draw">
+				<svg class="draw-svg" id="draw-svg"></svg>
+			</div>
+			<div class="panel">
+				<div class="control" id="control">
+					<button class="add-station" id="add-station">新增站点</button>
+					<button class="rename-station" id="rename-station">站点更名</button>
+					<button class="adjust-line" id="adjust-line">调整线路</button>
+					<button class="initialize" id="initialize">初始化</button>
+					<button class="search-route" id="search-route" >路线查询</button>
+					<button class="clear" id="clear">清空</button>
+				</div>
+				<div class="plan" id="plan">
+					<textarea readonly="true" id="plan-text" class="plan-text"></textarea>
+					<button id="plan-text-clear" class="plan-text-clear">清空</button>
+					<button id="help" class="help">使用说明</button>
+				</div>
+			</div>
+		</div>
+		<script>
+			require('./Button.js');
+			require('./Plan.js');
+			require('./Top.js');
+			function forbidScroll(e) {
+				e.preventDefault && e.preventDefault();
+				e.returnValue = false;
+				e.stopPropagation && e.stopPropagation();
+				return false;
+			}
+			const b = document.body;
+			b.addEventListener('mousewheel', forbidScroll, false);//禁止滚动
+			b.addEventListener('touchmove', forbidScroll, false);
+
+			const {webFrame} = require('electron');
+			webFrame.setVisualZoomLevelLimits(1, 1);//关闭双指缩放
+		</script>
+	</body>
+</html>

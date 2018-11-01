@@ -1,0 +1,183 @@
+@font-face {
+	font-family: 'Lato';
+    src : url('../fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Input';
+	src: url('../fonts/InputSans-Regular.ttf');
+}
+
+* {
+	font-family: 'Input', 'Lato', '冬青黑体', 'Hiragino Sans GB';
+	font-size: 14;
+}
+
+html,body {
+	height: 100%;
+}
+
+.container {
+	display: flex;
+	height: 100%;
+}
+
+.draw {
+	height: 900px;
+	width: 1200px;
+	float: left;
+}
+
+.panel {
+	height: 900px;
+	width: 400px;
+	float: left;
+}
+
+.panel .control {
+	height: 265px;
+	width: 400px;
+}
+
+.panel .plan {
+	height: 635px;
+	width: 400px;
+}
+
+.control {
+	position: relative;  /* 或者 position: absolute; 设置div为相对或者绝对定位*/ 
+	display: inline-block;
+}
+
+.add-station {
+	position: absolute;
+	top: 35px;
+	left: 20px;
+	width: 150px;
+	height: 40px;
+	border-radius:15px;
+	background-color: #EC5F68;
+	border: none;
+	transition-duration: 0.4s;
+	color: white;
+	float: fixed;
+	outline: none;
+}
+
+.rename-station {
+	position: absolute;
+	top: 115px;
+	left: 20px;
+	width: 150px;
+	height: 40px;
+	border-radius:15px;
+	background-color: #FAC863;
+	border: none;
+	transition-duration: 0.4s;
+	color: white;
+	float: fixed;
+	outline: none;
+}
+
+.adjust-line {
+	position: absolute;
+	top: 195px;
+	left: 20px;
+	width: 150px;
+	height: 40px;
+	border-radius:15px;
+	background-color: #F99157;/*#00A6A6;*/
+	border: none;
+	transition-duration: 0.4s;
+	color: white;
+	outline: none;
+}
+
+.initialize {
+	position: absolute;
+	top: 35px;
+	left: 200px;
+	width: 150px;
+	height: 40px;
+	border-radius:15px;
+	background-color: #6699CC;
+	border: none;
+	transition-duration: 0.4s;
+	color: white;
+	outline: none;
+}
+
+.search-route {
+	position: absolute;
+	top: 115px;
+	left: 200px;
+	width: 150px;
+	height: 40px;
+	border-radius:15px;
+	background-color: #988EDB;
+	border: none;
+	transition-duration: 0.4s;
+	color: white;
+	outline: none;
+}
+
+.clear {
+	position: absolute;
+	top: 195px;
+	left: 200px;
+	width: 150px;
+	height: 40px;
+	border-radius:15px;
+	background-color: #5FB3B3;
+	border: none;
+	transition-duration: 0.4s;
+	color: white;
+	outline: none;
+}
+
+.plan {
+	position: relative;  /* 或者 position: absolute; 设置div为相对或者绝对定位*/ 
+	display: inline-block;
+}
+
+.plan-text {
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	width: 350px;
+	height: 510px;
+	border: none;
+	background-color: #292B31;
+	outline: none;
+	color: white;
+	fill: white;
+	resize: none;
+}
+
+.plan-text-clear {
+	position: absolute;
+	top: 530px;
+	left: 20px;
+	width: 150px;
+	height: 40px;
+	border-radius:15px;
+	background-color: #F28288;
+	border: none;
+	transition-duration: 0.4s;
+	color: white;
+	outline: none;
+}
+
+.help {
+	position: absolute;
+	top: 530px;
+	left: 200px;
+	width: 150px;
+	height: 40px;
+	border-radius:15px;
+	background-color: #97A7B3;
+	border: none;
+	transition-duration: 0.4s;
+	color: white;
+	outline: none;
+}
